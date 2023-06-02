@@ -1,0 +1,6 @@
+rossealfs:
+    ros__parameters:
+       mountpoint: "/tmp"
+       categories: ["explainability", "rips", "velocity", "rosout"]
+       files: ["/explain.log", "/rips.log", "/velocity.log", "/rosout.log"]
+       types: ["std_msgs/String", "std_msgs/String", "geometry_msgs/msg/Twist", "rcl_interfaces/msg/Log"]
