@@ -55,7 +55,7 @@ If there is a custom Decoder class implemented for the type, it will be used to 
 
 - `RosoutDecoder.cpp`: If the type is `rcl_interfaces/msg/Log`, the log file will be a plain text file with all the fields of a ROSOUT message.
 
-The  **Decoder** superclass is used to write all other message types. In this case, the log file will store the published messages in binary format, as serialized messages (ROS2 standard serialization). For each received message, two contigous writes are performed:
+The  **Decoder** superclass is used to write the rest of message types. In this case, the log file will store the published messages in binary format, as serialized messages (ROS2 standard serialization). For each received message, two contigous writes are performed:
        
 - an `int64_t` integer with the length of the serialized ROS2 message (little-endian).
 - the rcl serialized message buffer.
